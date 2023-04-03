@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Poe Customize",
+  "description": "Customize and extend for chatbot Poe",
+  "version": "1.0",
+  "action": {
+    "default_icon": "assets/icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://poe.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://poe.com/*"
+      ],
+      "js": [
+        "js/background.js"
+      ],
+      "css": [
+        "css/poe-style.css",
+        "css/prism.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
